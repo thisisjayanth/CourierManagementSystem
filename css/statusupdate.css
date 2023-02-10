@@ -1,0 +1,162 @@
+body{
+  font-family: 'Poppins',sans-serif;
+background-image: url(../assets/backimage.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+font-family: 'Poppins',sans-serif;
+background-attachment: fixed;
+}
+
+
+
+.popupordercreationlogout{
+text-decoration: solid;
+color: white;
+visibility: hidden;
+width: 300px;
+position: absolute;
+top: 0%;
+left: 85%;
+transform: translate(-50%,-50%) scale(0.1);
+transition: transform 0.4s,top 0.4s;
+padding: 15px;
+background-color: #063247; 
+border-radius: 4px;
+font-size: 15px;
+box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+
+}
+
+.open-popup{
+visibility: visible;
+top: 30%;
+transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+/* navbar */
+*{
+margin: 0; 
+padding: 0;
+list-style: none;
+box-sizing: border-box;
+text-decoration: none;
+}
+nav .logo a{ 
+color: #23dbdb;
+font-size: 27px;
+font-weight: bold;
+line-height: 70px;
+padding-left: 30px;
+}
+nav{
+height: 70px;
+background: #063247;
+box-shadow: 0 3px 15px rgba(0,0,0,.4);
+width: 100%;
+position: fixed;
+/* top: 0;
+left: 0; */
+}
+nav ul{
+float: right;
+margin-right: 30px;
+}
+
+nav a{
+text-decoration: none;
+}
+
+nav ul li{
+display: inline-block;
+}
+nav ul li a{
+color: white;
+display: block;
+padding: 0 15px;
+line-height: 70px;
+font-size: 20px;
+background: #063247;
+transition: .5s;
+} 
+
+nav ul li button{
+border: none;
+color: white;
+display: block;
+padding: 0 15px;
+line-height: 60px;
+font-size: 20px;
+background: #063247;
+transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active,
+nav ul li button:hover,
+nav ul li button:active{
+color: #23dbdb;
+}
+
+nav ul ul{
+position: absolute;
+top: 85px;
+border-top: 3px solid #23dbdb;
+opacity: 0;
+visibility: hidden;
+}
+nav ul li:hover > ul{
+top: 70px;
+opacity: 1;
+visibility: visible;
+transition: .3s linear;
+}
+nav ul ul li button, nav ul ul li{
+width: 150px;
+display: list-item;
+position: relative;
+border: 1px solid #042331;
+border-top: none;
+}
+nav ul ul li a{
+line-height: 50px;
+}
+
+
+
+.status{
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  height: 100px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* border: solid 1px black; */
+  background-color: #23dbdb;
+  align-items: center;
+}
+.status>div{
+  border: solid 1px #042331;
+  background-color: #23dbdb;
+  line-height: 30px;
+  padding: 20px;
+  flex: 0 1 400px;
+  text-align: center;
+}
+
+
+.statusupdate{
+  position: absolute;
+  border-radius: 5px;
+  border: none;
+  background-color: #063247;
+  color: white;
+  padding: 10px;
+  font-size: medium;
+  font-weight: bold;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

@@ -1,0 +1,217 @@
+*{
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  body{
+    font-family: 'Poppins',sans-serif;
+    background-image: url(../assets/backimage.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /* overflow: hidden;
+    user-select: none; */
+  }
+  nav .logo a{ 
+    color: #23dbdb;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 70px;
+    padding-left: 30px;
+  }
+  nav{
+    height: 70px;
+    background: #063247;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+    position: fixed;
+    width: 100%;
+    /* top: 0;
+    left: 0; */
+  }
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+  }
+  nav ul li a{
+    color: white;
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    font-size: 20px;
+    background: #063247;
+    transition: .5s;
+  } 
+
+nav ul li button{
+  border: none;
+  color: white;
+    display: block;
+    padding: 0 15px;
+    line-height: 60px;
+    font-size: 20px;
+    background: #063247;
+    transition: .5s;
+}
+  nav ul li a:hover,
+  nav ul li a.active,
+  nav ul li button:hover,
+  nav ul li button:active{
+    color: #23dbdb;
+  }
+
+  nav ul ul{
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #23dbdb;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+  }
+  nav ul ul li button, nav ul ul li{
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid #042331;
+    border-top: none;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+  }
+
+
+  i{
+    margin-left: 2px;
+  }
+
+
+
+  .popcuslog,.popemplog,.popcusreg,.successfulregistration{
+    text-decoration: solid;
+    visibility: hidden;
+    width: 300px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    padding: 20px;
+    /* background-color: rgb(12, 207, 214);  */
+    background-color: #23dbdb;
+    transition: transform 0.4s,top 0.4s;
+    border-radius: 4px;
+    font-size: 15px;
+    box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+
+} 
+
+
+
+.poptrack{
+  text-decoration: solid;
+  visibility: hidden;
+  width: 300px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  padding: 20px;
+  background-color: rgb(13, 178, 184); 
+  transition: transform 0.4s,top 0.4s;
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 3px 15px rgba(82, 238, 243);
+
+}
+
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+transform: translate(-50%,-50%) scale(1);
+  }
+
+.popcuslog h1 ,.popcusreg h1, .popemplog h1{
+    color: #0f2027;
+    text-align: center;
+}
+.popcuslog p,.popcusreg p, .popemplog p,.poptrack p{
+    text-align: center;
+    padding: 5px;
+}
+.popcuslog button ,.popcusreg button , .popemplog button,.poptrack button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+.input-control input,.input-control select{
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+.input-control input:focus {
+    outline: 0;
+}
+.success input {
+    border-color: #09c372;
+}
+.error input {
+    border-color: #ff3860;
+}
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+/* .mainbody{
+  position: fixed;
+  top: 40%;
+  left: 25%;
+  text-align: center;
+}
+.mainbody input{
+  color: #063247;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 10px 0 10px 10px;
+  padding: 5px;
+  width: 550px;
+  height: 40px;
+} */
+
+#track{
+  height: 40px;
+  width: 300px;
+  /* background-color: rgba(82,238,243); */
+}
+
+#loginStatus , #customerloginmessage{
+ font-weight: 700;
+  color:rgb(255, 17, 17);
+  font-size: 22px;
+}
+
+.xxx{
+  visibility: visible;
+  top: 50%;
+transform: translate(-50%,-50%) scale(1);
+}

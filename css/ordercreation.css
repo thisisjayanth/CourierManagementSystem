@@ -1,0 +1,248 @@
+body{
+    font-family: 'Poppins',sans-serif;
+  background-image: url(../assets/backimage.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: 'Poppins',sans-serif;
+  background-attachment: fixed;
+  }
+
+
+.senderdetails{
+  text-decoration: solid;
+  /* visibility: hidden; */
+  width: 400px;
+  position: absolute;
+  top: 56%;
+  left: 3%;
+  transform: translate(0%,-50%);
+  padding: 20px;
+  background-color: rgb(12, 207, 214); 
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+} 
+.receiverdetails{
+    text-decoration: solid;
+  /* visibility: hidden; */
+  width: 400px;
+  position: absolute;
+  top: 56%;
+  left: 38%;
+  transform: translate(0%,-50%);
+  padding: 20px;
+  background-color: rgb(12, 207, 214); 
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+}
+ 
+
+.pricing{
+    text-decoration: solid;
+  /* visibility: hidden; */
+  width: 300px;
+  position: absolute;
+  top: 75%;
+  left: 73%;
+  transform: translate(0%,-50%);
+  padding: 20px;
+  background-color: rgb(12, 207, 214); 
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+}
+
+.successfulregistration{
+  text-decoration: solid;
+  visibility: hidden;
+  width: 300px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  padding: 20px;
+  /* background-color: rgb(12, 207, 214);  */
+  background-color: #23dbdb;
+  transition: transform 0.4s,top 0.4s;
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+
+} 
+
+.open-popup2{
+  visibility: visible;
+  top: 30%;
+  transform: translate(50%,50%) scale(1);
+}
+
+.popupordercreationlogout .successfulregistration{
+  text-decoration: solid;
+  color: white;
+  visibility: hidden;
+  width: 300px;
+  position: absolute;
+  top: 0%;
+  left: 85%;
+  transform: translate(-50%,-50%) scale(0.1);
+  transition: transform 0.4s,top 0.4s;
+  padding: 15px;
+  background-color: #063247; 
+  border-radius: 4px;
+  font-size: 15px;
+  box-shadow: 0 3px 15px rgba(3, 238, 246, 0.4);
+
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.senderdetails h1,.receiverdetails h1,.pricing h1{
+  color: #0f2027;
+  text-align: center;
+}
+.senderdetails p,.receiverdetails p,.pricing p{
+  text-align: center;
+  padding: 5px;
+}
+.senderdetails button ,.receiverdetails button,.pricing button{
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: #063247;
+  border: none;
+  border-radius: 4px;
+}
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+.input-control input,.input-control select{
+  border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+font-size: 10px;
+padding: 8px;
+width: 100%;
+}
+.input-control input:focus {
+  outline: 0;
+}
+.success input {
+  border-color: #09c372;
+}
+.error input {
+  border-color: #ff3860;
+}
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+::placeholder,option{
+  font-size: 20px;
+  text-decoration: solid;
+}
+option{
+  font-size: 15px;
+  text-decoration: solid;
+}
+
+i{
+  margin-left: 5px;
+}
+
+
+/* navbar */
+*{
+  margin: 0; 
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+nav .logo a{ 
+  color: #23dbdb;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-left: 30px;
+}
+nav{
+  height: 70px;
+  background: #063247;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  width: 100%;
+  position: fixed;
+  /* top: 0;
+  left: 0; */
+}
+nav ul{
+  float: right;
+  margin-right: 30px;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+  background: #063247;
+  transition: .5s;
+} 
+
+nav ul li button{
+border: none;
+color: white;
+  display: block;
+  padding: 0 15px;
+  line-height: 60px;
+  font-size: 20px;
+  background: #063247;
+  transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active,
+nav ul li button:hover,
+nav ul li button:active{
+  color: #23dbdb;
+}
+
+nav ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid #23dbdb;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li button, nav ul ul li{
+  width: 150px;
+  display: list-item;
+  position: relative;
+  border: 1px solid #042331;
+  border-top: none;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+
