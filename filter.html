@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <title>filter page</title>
+        <link rel="stylesheet" href="css/filter.css">
+        <script defer src="js/filter.js"></script>
+        <script src="https://kit.fontawesome.com/1555ff0a14.js" crossorigin="anonymous"></script>
+      
+    </head>
+    <body onload="getEmployeeName()">
+
+        <nav>
+            <span class="logo"><a href="home.html">Courier Management System</a></span>
+            <!-- <span></span> -->
+            <ul>
+                <li style="color: white; font-size:20px; padding-right: 50px;"><i class="fa-solid fa-user"></i><span style="padding-left: 10px;" id="username">User Name</span></li>
+                <li><a href="employeeDashBoard.html" class="home">Dashboard<i class="fa-solid fa-house"></i></a></li>
+                <li><button type="submit" class="logoutcustomer">Logout<i class="fa-solid fa-right-from-bracket"></i></button></li>
+            </ul>
+        </nav>
+
+        <div class="senderinfo">
+           
+            <div class="input-control">
+                <label for="address">Courier Id</label>
+                <input id="courierid" name="address" placeholder="Courier Id" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control"> 
+                <label for="username">Sender Name</label>
+                <input id="senderusername" name="username" placeholder="Username"  type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Sender Email</label>
+                <input id="senderemail" name="email" placeholder="Enter your email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="Phonenumber">Sender Phone number</label>
+                <input id="senderphonenumber" name="phonenumber" placeholder="Enter your phone number" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="cars">sender state</label>
+                <select styel="font-size:20px"id="senderstate" name="state" style="font-size: 15px;">
+                    <option value="">choose option</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chandigarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="input-control">
+                <label for="pincode">sender pincode</label>
+                <input id="senderpin" name="pincode" placeholder="Pincode" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control"> 
+                <label for="username">sender city</label>
+                <input id="sendercity" name="username" placeholder="city"  type="text">
+                <div class="error"></div>
+            </div>
+        </div>
+
+
+        <div class="receiverinfo">
+            <div class="input-control">
+                <label for="address">Courier Status</label>
+                <input id="courierstatus"name="address" placeholder="Courier Status" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control"> 
+                <label for="username">receiver Name</label>
+                <input id="receiverusername" name="username" placeholder="Username"  type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">receiver Email</label>
+                <input id="receiveremail" name="email" placeholder="Enter your email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="Phonenumber">receiver Phone number</label>
+                <input id="receiverphonenumber" name="phonenumber" placeholder="Enter your phone number" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="cars">receiver state</label>
+                <select id="receiverstate" name="state" style="font-size: 15px;">
+                    <option value="">choose option</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chandigarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="input-control">
+                <label for="pincode">receiver pincode</label>
+                <input id="receiverpin" name="pincode" placeholder="Pincode" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control"> 
+                <label for="username">receiver city</label>
+                <input id="receivercity" name="username" placeholder="city"  type="text">
+                <div class="error"></div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="filter">
+            <h1>Find order details</h1><br>
+            <h3>Couriers placed</h3>
+            <div class="input-control"> 
+                <label for="username">from this date</label>
+                <input id="orderedafterdate" name="username" placeholder="Enter date"  type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">to this date</label>
+                <input id="orderedbeforedate" name="email" placeholder="Enter date" type="text">
+                <div class="error"></div>
+            </div>
+            <h3>Couriers delivered</h3>
+            <div class="input-control"> 
+                <label for="username">from this date</label>
+                <input id="delivereafterdate" name="username" placeholder="Enter date"  type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">to this date</label>
+                <input id="deliverebeforedate" name="email" placeholder="Enter date" type="text">
+                <div class="error"></div>
+            </div>
+            <button class="createorder" type="submit">Filter</button>
+        </div>
+
+
+
+
+
+        
+
+        <!-- logout popup -->
+        <div class="popupordercreationlogout">
+            <button class="close-btn closecustomerlogout" style="border: none; border-radius: 3px; width: 10px; position: absolute; top: 10px; right: 10px; width: 15px; height: 15px; background-color: red; margin-top: 0; padding: 0;">&times;</button>
+            <h2 style="line-height: 40px; margin-bottom: 10px;">Do you wish to logout</h2>
+            <span style="text-align: center;"><a href="home.html" style="text-align: center; border-radius: 3px; border:solid 1px rgb(75, 148, 103); padding:5px; background-color:rgb(64, 245, 188);">yes</a></span>
+        </div> 
+    </body>
+</html>

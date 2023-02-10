@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>employee dashboard</title>
+        <link rel="stylesheet" href="css/employeeDashBoard.css">
+        <script defer src="js/employeeDashBoard.js"></script>
+        <script src="https://kit.fontawesome.com/1555ff0a14.js" crossorigin="anonymous"></script>
+      
+    </head>
+    <body onload="getEmployeeName()">
+
+        <nav >
+            <span class="logo"><a href="home.html">Courier Management System</a></span>
+            <ul>
+                <li style="color: white; font-size:25px; padding-right: 500px;"><i class="fa-solid fa-user"></i><span style="padding-left: 10px; font-weight: bold;" id="employeeName">Employee Name</span></li>
+                <li><a href="home.html" style=" font-weight:bold;" class="home">Home<i class="fa-solid fa-house"></i></a></li>
+                <li><button type="submit" class="logoutcustomer">Logout<i class="fa-solid fa-right-from-bracket"></i></button></li>
+            </ul>
+        </nav>
+
+     
+
+
+        <div class="container">
+            <div onclick="location.href='employeeProfile.html';" style="cursor: pointer;" class="box box1">
+              <div class="icon">
+                <i class="fa-solid fa-user iconic"></i>
+                <p><a href="employeeProfile.html" style="color:#063247; font-weight: bold;">MyProfile</a></p>
+              </div>
+            </div>
+
+
+            <div onclick="location.href='ordercreation.html';" style="cursor: pointer;" class="box box2">
+              <div class="icon">
+                <i class="fa-solid fa-circle-up iconic"></i>
+                <p><a href="" style="color:#063247;font-weight: bold">Create Courier</a></p>
+              </div>
+            </div>
+
+
+
+            <div onclick="location.href='filter.html';" style="cursor: pointer;" class="box box3">
+              <div class="icon">
+                <i class="fa-solid fa-circle-down iconic"></i>
+                <p><a href="" style="color:#063247;font-weight: bold">Search Courier Data</a></p>
+              </div>
+            </div>
+
+            
+
+            <div onclick="location.href='statusupdate.html';" style="cursor: pointer;" class="box box3">
+              <div class="icon">
+                <i class="fa-solid fa-circle-down iconic"></i>
+                <p><a href="" style="color:#063247;font-weight: bold">Update Courier Status</a></p>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+          <div class="popupcustomerlogout">
+            <button class="close-btn closecustomerlogout" style="border: none; border-radius: 3px; width: 10px; position: absolute; top: 10px; right: 10px; width: 15px; height: 15px; background-color: red; margin-top: 0; padding: 0;">&times;</button>
+            <h1 style="line-height: 40px; margin-bottom: 10px;">Do you wish to logout</h1>
+            <button id="logout" style="text-align: center;"><span style="text-align: center; border-radius: 3px; border:solid 1px rgb(75, 148, 103); padding:5px; background-color:rgb(64, 245, 188);">yes</span></button>
+        </div> 
+    </body>
+</html>

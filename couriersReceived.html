@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Couriers Sent</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/couriersReceived.css">
+        <script defer src="js/couriersReceived.js"></script>
+        <script src="https://kit.fontawesome.com/1555ff0a14.js" crossorigin="anonymous"></script>
+      
+    </head>
+    <body onload="getUserCourierData()">
+  <div>
+        <nav >
+            <span class="logo"><a href="home.html">Courier Management System</a></span>
+            <ul>
+                <li style="color: white; font-size:25px; padding-right: 500px;"><i class="fa-solid fa-user"></i><span style="padding-left: 10px; font-weight: bold;" id="username">User Name</span></li>
+                <li><a href="userDashboard.html" style=" font-weight:bold;" class="home">Dashboard<i class="fa-solid fa-house"></i></a></li>
+                <li><button type="submit" class="logoutcustomer">Logout<i class="fa-solid fa-right-from-bracket"></i></button></li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+     
+
+        <div id="tablebody">
+            <table class="table table-striped">
+                <tr  class="bg-info">
+                    <th data-column="S_No" data-order="desc">S.No </th>
+                    <th data-column="courier_id" data-order="desc" >Courier ID</th>
+                    <th data-column="courier_placed_on" data-order="desc">Courier Placed on</th>
+                    <th data-column="from_name" data-order="desc">Sender Name</th>
+                    <th data-column="to_name" data-order="desc">Receiver Name</th>
+                    <th data-column="courier_status" data-order="desc">Courier_status</th>
+                    <th data-column="More-info" data-order="desc">More-info </th>
+                </tr>
+            
+                <tbody id="myTable">
+                    
+                </tbody>
+            </table>
+          </div>
+
+
+
+
+          <div class="popupcustomerlogout">
+            <button class="close-btn closecustomerlogout" style="border: none; border-radius: 3px; width: 10px; position: absolute; top: 10px; right: 10px; width: 15px; height: 15px; background-color: red; margin-top: 0; padding: 0;">&times;</button>
+            <h1 style="line-height: 40px; margin-bottom: 10px;">Do you wish to logout</h1>
+            <button id="logout" style="text-align: center;"><span style="text-align: center; border-radius: 3px; border:solid 1px rgb(75, 148, 103); padding:5px; background-color:rgb(64, 245, 188);">yes</span></button>
+        </div> 
+    </body>
+</html>

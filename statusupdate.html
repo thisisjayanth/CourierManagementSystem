@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>filter page</title>
+        <link rel="stylesheet" href="css/statusupdate.css">
+        <script defer src="js/statusupdate.js"></script>
+        <script src="https://kit.fontawesome.com/1555ff0a14.js" crossorigin="anonymous"></script>
+      
+    </head>
+    <body>
+
+        <nav>
+            <span class="logo"><a href="home.html">Courier Management System</a></span>
+            <!-- <span></span> -->
+            <ul>
+                <li style="color: white; font-size:20px; padding-right: 50px;"><i class="fa-solid fa-user"></i><span style="padding-left: 10px;" id="username">Vamshi Krishna</span></li>
+                <li><a href="employeeDashboard.html" class="home">Dashboard<i class="fa-solid fa-house"></i></a></li>
+                <li><button type="submit" class="logoutcustomer">Logout<i class="fa-solid fa-right-from-bracket"></i></button></li>
+            </ul>
+        </nav>
+
+      <br><br><br><br>
+
+
+        <div class="status">
+            <div>
+                <h3>Courier Id</h3>
+                <span>100000006</span>
+            </div>
+            <div>
+                <h3>Courier placed on</h3>
+                <span>2022-11-23T16:16:25.000Z</span>
+            </div>
+            <div>
+                <h3>Sender Name</h3>
+                <span>vamshi</span>
+            </div>
+            <div>
+                <h3>Reciever Name</h3>
+                <span>bindu</span>
+            </div>
+            <div>
+                <h3>Status</h3>
+                <span><select name="courierstatus" id="dropdown" style="border-radius: 5px; padding: 6px;color: white; background-color: #063247; border: solid 1px black;">
+                    <option value="received">courier received</option>
+                    <option value="dispatched">Dispatched</option>
+                    <option value="intransit">Intransit</option>
+                    <option value="delivered">Delivered</option>
+                  </select></span>
+            </div>
+        </div>
+        <button class="statusupdate">Update</button>
+
+
+
+
+
+        <!-- logout popup -->
+        <div class="popupordercreationlogout">
+            <button class="close-btn closecustomerlogout" style="border: none; border-radius: 3px; width: 10px; position: absolute; top: 10px; right: 10px; width: 15px; height: 15px; background-color: red; margin-top: 0; padding: 0;">&times;</button>
+            <h2 style="line-height: 40px; margin-bottom: 10px;">Do you wish to logout</h2>
+            <span style="text-align: center;"><a href="home.html" style="text-align: center; border-radius: 3px; border:solid 1px rgb(75, 148, 103); padding:5px; background-color:rgb(64, 245, 188);">yes</a></span>
+        </div> 
+    </body>
+</html>

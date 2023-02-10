@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>customer profile</title>
+        <link rel="stylesheet" href="css/customerProfile.css">
+        <script defer src="js/customerProfile.js"></script>
+        <script src="https://kit.fontawesome.com/1555ff0a14.js" crossorigin="anonymous"></script>
+      
+    </head>
+    <body onload="getUserData()">
+
+        <nav >
+            <span class="logo"><a href="home.html">Courier Management System</a></span>
+            <ul>
+                <li style="color: white; font-size:25px; padding-right: 500px;"><i class="fa-solid fa-user"></i><span style="padding-left: 10px; font-weight: bold;" id="username2">User Name</span></li>
+                <li><a href="userDashboard.html" style=" font-weight:bold;" class="home">Dashboard<i class="fa-solid fa-house"></i></a></li>
+                <li><button type="submit" class="logoutcustomer">Logout<i class="fa-solid fa-right-from-bracket"></i></button></li>
+            </ul>
+        </nav>
+
+        <div class="customerprofile" style="font-size:20px">
+            <h1>Customer Profile</h1>
+            <div class="input-control"> 
+                <label for="username">Full Name</label>
+                <input style="font-size:25px" id="username" name="username" placeholder="Username"  type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input style="font-size:25px" id="email" name="email" placeholder="Enter your email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="Phonenumber">Phone number</label>
+                <input style="font-size:25px" id="phonenumber1" name="phonenumber" placeholder="Enter your phone number" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="address">address</label>
+                <input style="font-size:25px" id="address"name="address" placeholder="Enter your address" type="text">
+                <div class="error"></div>
+            </div>
+            <div id="state2" class="input-control">
+                <label for="cars">state</label>
+                <select style="font-size:25px" id="state" name="state">
+                    <option id='Andaman and Nicobar Islands'value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option id='Andhra Pradesh'value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option id='telangana'value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="input-control">
+                <label for="pincode">pincode</label>
+                <input style="font-size:25px" id="pin" name="pincode" placeholder="Pincode" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input style="font-size:25px" id="password1"name="password" placeholder="Password" type="password">
+                <div class="error"></div>
+            </div>
+            <button style="font-size:25px" class="submitupdate" type="submit">Update profile</button>
+        </div>
+
+        <!-- logout popup -->
+        <div class="popupcustomerlogout">
+            <button class="close-btn closecustomerlogout" style="border: none; border-radius: 3px; width: 10px; position: absolute; top: 10px; right: 10px; width: 15px; height: 15px; background-color: red; margin-top: 0; padding: 0;">&times;</button>
+            <h1 style="line-height: 40px; margin-bottom: 10px;">Do you wish to logout</h1>
+            <button id="logout" style="text-align: center;"><span style="text-align: center; border-radius: 3px; border:solid 1px rgb(75, 148, 103); padding:5px; background-color:rgb(64, 245, 188);">yes</span></button>
+        </div> 
+
+        <div class="successfulregistration">
+            <button class="close-btn closesuccessfulregistration" style="border: none; width: 10px; position: absolute; top: 10px; right: 10px; width: 15px; height: 15px; background-color: red; margin-top: 0; padding: 0;">&times;</button>
+             <h2 id="YN"></h2>
+            <h3 id="responsepopupdata">update pop up</h3>
+        </div>
+
+    </body>
+</html>

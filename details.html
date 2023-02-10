@@ -1,0 +1,130 @@
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="styledetails.css" />
+<style>
+    /* th{ 
+        color:#fff;
+            } */
+</style>
+
+</head>
+
+<body>
+	
+
+	  <div id="body2">
+		<table class="table table-striped">
+			<tr  class="bg-info">
+				<th data-column="courierid" data-order="desc" >Courier ID &#9650</th>
+				<th data-column="courierweight" data-order="desc">Courier Weight &#9650</th>
+				<th data-column="from_name" data-order="desc">From Name &#9650</th>
+				<th data-column="to_name" data-order="desc">To Name &#9650</th>
+				<th data-column="from_phone" data-order="desc">From PhoneNumber &#9650</th>
+				<th data-column="to_phone" data-order="desc">To PhoneNumber &#9650</th>
+				<th data-column="from_email" data-order="desc">From Email &#9650</th>
+				<th data-column="to_email" data-order="desc">To Email &#9650</th>
+				<th data-column="to_pincode" data-order="desc">To Pincode &#9650</th>
+				<th data-column="from_pincode" data-order="desc">From Pincode &#9650</th>
+				<th data-column="from_city" data-order="desc">From City &#9650</th>
+				<th data-column="to_city" data-order="desc">To City &#9650</th>
+				<th data-column="from_state" data-order="desc">From State &#9650</th>
+				<th data-column="to_state" data-order="desc">To State &#9650</th>
+				<th data-column="start_date" data-order="desc">Courier Start Date &#9650</th>
+				<th data-column="end_date" data-order="desc">Courier End Date &#9650</th>
+				<th data-column="delstart_date" data-order="desc">Courier Delivery Start Date &#9650</th>
+				<th data-column="delend_date" data-order="desc">Courier Delivery End Date &#9650</th>
+			</tr>
+		
+			<tbody id="myTable">
+				
+			</tbody>
+		</table>
+	  </div>
+
+</body>
+
+<script>
+    function getData(){
+	url="obj.txt";
+        fetch(url).then((response)=>{
+	  return response.json();
+	}).then((data)=>{
+	   var myArray=data;
+        })
+	
+      }
+     getData();
+
+myArray = [
+	    {'courierid':'1', 'courierweight':'12/10/1989','from_name':'INTRANSIT', 'to_name':'12/10/1989','from_phone':'INTRANSIT', 'to_phone':'12/10/1989','from_email':'INTRANSIT','to_email':'INTRANSIT','from_pincode':'534002','to_pincode':'534007','from_city':'Eluru','to_city':'Vijayawada','from_state':'Andhra',
+		'to_state':'kerala','start_date':'12/07/22','end_date':'13/07/2022','delstar_tdate':'12/11/2022','delend_date':'11/10/2022'},
+	    {'courierid':'1', 'courierweight':'12/10/1989','from_name':'INTRANSIT', 'to_name':'12/10/1989','from_phone':'INTRANSIT', 'to_phone':'12/10/1989','from_email':'INTRANSIT','to_email':'INTRANSIT','from_pincode':'534002','to_pincode':'534007','from_city':'Eluru','to_city':'Vijayawada','from_state':'Andhra',
+		'to_state':'kerala','start_date':'12/07/22','end_date':'13/07/2022','delstar_tdate':'12/11/2022','delend_date':'11/10/2022'},
+	    {'courierid':'1', 'courierweight':'12/10/1989','from_name':'INTRANSIT', 'to_name':'12/10/1989','from_phone':'INTRANSIT', 'to_phone':'12/10/1989','from_email':'INTRANSIT','to_email':'INTRANSIT','from_pincode':'534002','to_pincode':'534007','from_city':'Eluru','to_city':'Vijayawada','from_state':'Andhra',
+		'to_state':'kerala','start_date':'12/07/22','end_date':'13/07/2022','delstar_tdate':'12/11/2022','delend_date':'11/10/2022'},
+	    {'courierid':'1', 'courierweight':'12/10/1989','from_name':'INTRANSIT', 'to_name':'11/10/1989','from_phone':'INTRANSIT', 'to_phone':'12/10/1989','from_email':'INTRANSIT','to_email':'INTRANSIT','from_pincode':'534002','to_pincode':'534007','from_city':'Eluru','to_city':'Vijayawada','from_state':'Andhra',
+		'to_state':'kerala','start_date':'12/07/22','end_date':'13/07/2022','delstar_tdate':'12/11/2022','delend_date':'11/10/2022'},
+	    {'courierid':'1', 'courierweight':'12/10/1989','from_name':'INTRANSIT', 'to_name':'12/10/1989','from_phone':'INTRANSIT', 'to_phone':'12/10/1989','from_email':'INTRANSIT','to_email':'INTRANSIT','from_pincode':'534002','to_pincode':'534007','from_city':'Eluru','to_city':'Vijayawada','from_state':'Andhra',
+		'to_state':'kerala','start_date':'12/07/22','end_date':'13/07/2022','delstar_tdate':'12/11/2022','delend_date':'11/10/2022'},
+	]
+	
+
+	$('th').on('click', function(){
+		var column = $(this).data('column')
+		var order = $(this).data('order')
+		var text = $(this).html()
+		text = text.substring(0, text.length - 1)
+
+		if(order == 'desc'){
+			$(this).data('order', "asc")
+			myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1)
+			text += '&#9660'
+
+		}else{
+			$(this).data('order', "desc")
+			myArray = myArray.sort((a,b) => a[column] < b[column] ? 1 : -1)
+			text += '&#9650'
+
+		}
+		$(this).html(text)
+		buildTable(myArray)
+	})
+
+	buildTable(myArray)
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+		table.innerHTML = ''
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].courierid}</td>
+							<td>${data[i].courierweight}</td>
+							<td>${data[i].from_name}</td>
+							<td>${data[i].to_name}</td>
+							<td>${data[i].from_phone}</td>
+							<td>${data[i].to_phone}</td>
+							<td>${data[i].from_email}</td>
+							<td>${data[i].to_email}</td>
+							<td>${data[i].from_pincode}</td>
+							<td>${data[i].to_pincode}</td>
+							<td>${data[i].from_city}</td>
+							<td>${data[i].to_city}</td>
+							<td>${data[i].from_state}</td>
+							<td>${data[i].to_state}</td>
+							<td>${data[i].start_date}</td>
+							<td>${data[i].end_date}</td>
+							<td>${data[i].delstart_date}</td>
+							<td>${data[i].delend_date}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
+</html>
